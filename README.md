@@ -137,6 +137,9 @@ Note: We will look at the distribution of these metrics and arbitrarily decide a
 - Writing up results & content for website (Matthew, Marie-Lou, Sara)
 - Build datastory website (Tong, Enes)
 
+
+-----------------------
+
 Robert West, Jure Leskovec. "Human Wayfinding in Information Networks". In: *Proceedings of the 21st international conference on World Wide Web* (WWW '12), April 2012, pp. 619–628. DOI: [10.1145/2187836.2187920](https://doi.org/10.1145/2187836.2187920).
 
 
