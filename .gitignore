@@ -1,0 +1,9 @@
+
+data/wikispeedia_paths-and-graph.tar.gz
+data/wikispeedia_paths-and-graph/articles.tsv
+data/wikispeedia_paths-and-graph/categories.tsv
+data/wikispeedia_paths-and-graph/links.tsv
+data/wikispeedia_paths-and-graph/paths_finished.tsv
+data/wikispeedia_paths-and-graph/paths_unfinished.tsv
+data/wikispeedia_paths-and-graph/shortest-path-distance-matrix.txt
+.ipynb_checkpoints/preliminary_analysis-checkpoint.ipynb
