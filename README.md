@@ -81,7 +81,10 @@ Note: We will look at the distribution of these metrics and arbitrarily decide a
 - Regression models from statsmodels library will be utilized to evaluate the effect of article features (`article_length`, `link_position`, `ratio_I/O_links`) on navigation performance, with pandas facilitating data manipulation for model inputs, all ultimately helping to quantify the features that differentiate difficulty of article navigation. Note, the model will be similar to the one presented below but we will use the three article features of interest as predictors in the same model, and as we have two dependent variables (completion and speed), we will build two models, one determining if our features affect the success of the attempt and the second assessing if our features affect the speed of completion of the attempt.
 
 #### Step 6: Hub & Category Impact Assessment
-- We will look at the effects of (1) hub centrality measurements/clustering-coefficients and (2) categories on player performance metrics using MixedLM from statsmodels. We also account for confounds and random effects. We therefore have 12 univariate models (one for each predictor & dependent variable combination). Note, we use separate univariate models as we are interested in each effect individually, and choose not to use a multivariate model as univariate models are more easily interpretable and the number of effects studied is still sufficiently small. 
+- We will look at the effects of (1) hub centrality measurements/clustering-coefficients and (2) categories on player performance metrics using MixedLM from statsmodels. We also account for confounds and random effects. We therefore have 12 univariate models (one for each predictor & dependent variable combination). Note, we use separate univariate models as we are interested in each effect individually, and choose not to use a multivariate model as univariate models are more easily interpretable and the number of effects studied is still sufficiently small.
+
+-----------------------
+
 
 #### Model Variables
 
