@@ -93,7 +93,7 @@ Note: We will look at the distribution of these metrics and arbitrarily decide a
 - `speed`
 
 ##### Independent Variables (Predictors):
-- **Hub Prioritization**: A metric indicating how often players select hub nodes during navigation. We make six models per dependent vairable for each of these predictors:
+- **Hub Prioritization**: A metric indicating how often players select hub nodes during navigation. We make six models per dependent vairable:
   - `nb_hubs_degree`
   - `nb_hubs_betweennes`
   - `nb_hubs_closeness`
