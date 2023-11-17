@@ -7,7 +7,7 @@ In Wikispeedia, players seek to reach a target article from another through the 
 
 
 Research questions
-—-----------------------
+-----------------------
 Given players’ differential behavior in searching for the optimal path from one link to another, is there an optimal way to categorize wikipedia based on wikispeedia paths? 
 
 Article organization
