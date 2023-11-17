@@ -37,20 +37,20 @@ After preliminary visualization of our data, we go to Phase 2.
 (note: not all variables are named as such in the current notebook, this is just for readability of the project proposal)
 
 - Article Metrics: 
-    - ratio_I/O_links: the ratio between the number of incoming/outgoing links for each article,
-    - article_length: length of articles from the plain text size of each article,
-    - link_position: identify the positions of links within the articles by parsing HTML,
-    - category_level: identify main categories and two sublevels of categories.
+    - `ratio_I/O_links`: the ratio between the number of incoming/outgoing links for each article,
+    - `article_length`: length of articles from the plain text size of each article,
+    - `link_position`: identify the positions of links within the articles by parsing HTML,
+    - `category_level`: identify main categories and two sublevels of categories.
 - Player path specific metrics:
-    - completion: binary indicator of whether a player completed a path,
-    - speed: continuous variable representing the time taken to finish a path,
-    - average_duration_per_step: total duration of attempt divided by the number of steps in the path,
-    - average_length_of_articles: Get average length of articles in a player path,
-    - position_of_links_per_step: we exclude paths with back clicks,
-    - average_position_per_step: average positions of links for each path.
+    - `completion`: binary indicator of whether a player completed a path,
+    - `speed`: continuous variable representing the time taken to finish a path,
+    - `average_duration_per_step`: total duration of attempt divided by the number of steps in the path,
+    - `average_length_of_articles`: Get average length of articles in a player path,
+    - `position_of_links_per_step`: we exclude paths with back clicks,
+    - `average_position_per_step`: average positions of links for each path.
 - Player specific information
-    - number_of_attempts_per_player: note that this will be the number of attempts up to that attempt,
-    - win_rates: number of games finished divided by the number_of_attempts_per_player.
+    - `number_of_attempts_per_player`: note that this will be the number of attempts up to that attempt,
+    - `win_rates`: number of games finished divided by the `number_of_attempts_per_player`.
 
  
 ### Phase 3: Hub Identification and Path Analysis
@@ -58,27 +58,27 @@ After preliminary visualization of our data, we go to Phase 2.
 #### Step 3: Building the Wikipedia Graph and Identifying Hubs
 
 - Generate an unweighted graph using Networkx where articles are nodes and links are edges,
-- We will characterize wikipedia article using NetworkX's centrality algorithms (degree_centrality, betweenness_centrality, closeness_centrality, eigenvector_centrality_numpy) on our wikipedia graph,
-- We use NetworkX's clustering algorithm to determine clustering coefficients of nodes. 
+- We will characterize wikipedia article using NetworkX's centrality algorithms (`degree_centrality`, `betweenness_centrality`, `closeness_centrality`, `eigenvector_centrality_numpy`) on our wikipedia graph,
+- We use NetworkX's clustering algorithm to determine `clustering_coefficients` of nodes. 
 
 Note: We will look at the distribution of these metrics and arbitrarily decide a threshold to make these nodes a hub or not a hub (method tbd).
 
 #### Step 4: Pathway Analysis
 - shortest_possible_path: shortest paths computed by Dijkstra's algorithm (via NetworkX's shortest_path function) will be compared using the scipy.spatial.distance module. We will use this measure later as a confound, as the shortest possible path necessarily limits the player’s shortest path.
 - Hub prioritization metric: For each path we calculate the number of hubs per path:
-    - nb_hubs_degree,
-    - nb_hubs_betweennes,
-    - nb_hubs_closeness,
-    - nb_hubs_eigenvector,
-    - nb_hubs_clustering.
+    - `nb_hubs_degree`
+    - `nb_hubs_betweennes`
+    - `nb_hubs_closeness`
+    - `nb_hubs_eigenvector`
+    - `nb_hubs_clustering`
 - Category prioritization metric: For each path calculate the number of wikipedia categories the player went through to get to his target:
-    - nb_categories
+    - `nb_categories`
  
 
 ### Phase 4: Comparative Analysis and Statistical Modeling
 
 #### Step 5: Feature Impact Assessment
-- Regression models from statsmodels library will be utilized to evaluate the effect of article features (text length, link position, ratio of I/O links) on navigation performance, with pandas facilitating data manipulation for model inputs, all ultimately helping to quantify the features that differentiate difficulty of article navigation. Note, the model will be similar to the one presented below but we will use the three article features of interest as predictors in the same model, and as we have two dependent variables (completion and speed), we will build two models, one determining if our features affect the success of the attempt and the second assessing if our features affect the speed of completion of the attempt.
+- Regression models from statsmodels library will be utilized to evaluate the effect of article features (`article_length`, `link_position`, `ratio_I/O_links`) on navigation performance, with pandas facilitating data manipulation for model inputs, all ultimately helping to quantify the features that differentiate difficulty of article navigation. Note, the model will be similar to the one presented below but we will use the three article features of interest as predictors in the same model, and as we have two dependent variables (completion and speed), we will build two models, one determining if our features affect the success of the attempt and the second assessing if our features affect the speed of completion of the attempt.
 
 #### Step 6: Hub & Category Impact Assessment
 - We will look at the effects of (1) hub centrality measurements/clustering-coefficients and (2) categories on player performance metrics using MixedLM from statsmodels. We also account for confounds and random effects. We therefore have 12 univariate models (one for each predictor & dependent variable combination). Note, we use separate univariate models as we are interested in each effect individually, and choose not to use a multivariate model as univariate models are more easily interpretable and the number of effects studied is still sufficiently small. 
