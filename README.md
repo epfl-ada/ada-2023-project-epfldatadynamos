@@ -50,7 +50,7 @@ To tackle the article relations part of our research questions, we will analyze 
 To analyze players behaviour, we will group paths by the hased IP of players and attempt to characterize how each player navigate through the network of articles.
 
 Additional dataset
-—---------------------
+---------------------
 The current version of Wikipedia articles (instead of the school selection) may complement our analysis to either confirm our results or indicate the limitations of our analysis.
 
 We would still keep the selection of articles the same to make the data analysis feasible (only ~4600 articles), but we will use the full, updated linking network from the current Wikipedia.
