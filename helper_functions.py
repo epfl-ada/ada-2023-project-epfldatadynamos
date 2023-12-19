@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup, Comment
 import pandas as pd
 
 # Define the path for data files
-graphs_path = './data/wikispeedia_paths-and-graph/'
+graphs_path = ''
 
 # Read TSV files
 def read_tsv(file_name, names=None):
@@ -30,7 +30,7 @@ def gen_uniq_str(str_):
 # Find the HTML position of a list of link targets in a source article
 def find_html_position(source, targets):
     article_quote = source
-    file_path = os.path.join('data/wpcd/wp/', article_quote[0].lower(), f'{article_quote}.htm')
+    file_path = os.path.join('plaintext_articles/', article_quote[0].lower(), f'{article_quote}.htm')
     
     try:
         with open(file_path) as f:
