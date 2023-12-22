@@ -125,17 +125,22 @@ Going back to our research questions, although our various analyses cannot give 
 
 - Do the existing categories in this abridged Wikipedia reflect optimal shortest paths and/or the path effectively taken by players?
 
-**Answer**: Since the existing categories reduce the average shortest path lengths within themselves and have a statistically significant influence on player behaviour, we can say that they do reflect the optimal paths and the ones taken by players. However, the extent of their influence is very small overall on player performance.
+**Answer**: Since the existing categories reduce the average shortest path lengths within themselves and have a statistically significant influence on player behaviour, we can say that they do reflect the optimal paths and the ones taken by players. However, the extent of their influence is very small overall on player performance based on the small r-squared values.
 
 - What content features of Wikipedia articles (e.g., number of links, length of article, etc…) may influence the efficiency of player navigation in Wikispeedia?
 
-**Answer**:  TODO
+**Answer**: According to our model, the article’s length, its average input output link ratio and the position of hyperlinks within
+them seem to affect how fast a player completes a game.
+However, we note very low r-squared values, and the tests are rather
+inconclusive since it is very likely that there are other variables in play here.
+
 - How do different network centrality and clustering measures affect player paths and can it give us insight into the way humans perceive and utilize hubs in an information network?
 
 **Answer**: Human players who choose to use more hubs are more likely to finish the game in a shorter time, although the number or proportion of hubs they use in their paths has less influence than their "luck" (the length of the optimal path between the source and target article in their game play.)
+
 - How do the hub and content cue characteristics humans may be optimizing for comparing with the organizational structure of Wikipedia's categories?
 
-**Answer**:  TODO
+**Answer**:  From the analysis of the distribution of centrality measures in articles used by players, it seems that many players favour hubs with a higher closeness centrality measure. At the same time, the shortest path inherent to the Wikipedia network still plays a larger role in whether a player finishes a game successfully or how fast they are. As a result, from our current analyses, it is hard to say whether Wikipedia structure is optimized for efficiency navigation or not, or whether players' performance in the game is limited by the current structure. Further analyses, and possibly additionally data gathering (e.g. via surveys) would be necessary to gain more insights on how and why players behave in a certain way, and if optimization can be achieved.
 
 Contributions
 =============
