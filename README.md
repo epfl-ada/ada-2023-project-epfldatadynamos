@@ -3,6 +3,8 @@ Wiki-Wandering: A tale of luck or skill?
 Datastory
 -----------
 Please visit our datastory here: [Wiki-Wandering: A tale of luck or skill?](https://sdhina.github.io/epfldatadynamos/)
+
+
 About
 -----------
 Through Wikispeedia, a game which tracks user paths from a source to a target article through a abridged Wikipedia dataset,  West and Leskovec (2012) explore how humans navigate information networks on platforms like Wikipedia. Most notably, they note that compared to algorithmic shortest path methods, humans tend to use "hub" nodes and leverage content cues to guide their navigation. As such, using this same dataset, we proposed to (1) rank the performance of players in order to assess (2) how their success is tied to the content of articles as well as (3) how the interconnections between articles determine the outcome of their attempts relative to category connections proposed by wikipedia. Thus, we wanted to study these effects both to gain insight into how Wikipedia's structure shapes player navigation in the context of human search preferences, and to propose potential optimizations for its articles’ organization with regards to Wikispeedia.
