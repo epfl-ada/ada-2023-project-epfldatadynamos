@@ -108,7 +108,6 @@ We look at the distributions of some of these measures for articles and players 
   - `same_category`
 
 ##### Covariates (Potential Confounds):
-- `number_of_attempts_per_player`: suggesting familiarity with the task.
 - `shortest_path`: accounting for inherent path difficulty.
 
 ##### Random Effects (in MixedLM):
