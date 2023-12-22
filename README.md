@@ -19,7 +19,7 @@ Within the Wikispeedia gameplay,  what potential optimizations can we suggest to
 - Do the existing categories in this abridged Wikipedia reflect optimal shortest paths and/or the path effectively taken by players?
 - What content features of Wikipedia articles (e.g., number of links, length of article, etc…) may influence the efficiency of player navigation in Wikispeedia?
 - How do different network centrality and clustering measures affect player paths and can it give us insight into the way humans perceive and utilize hubs in an information network?
-- How do the hub and content cue characteristics humans may be optimizing for comparing with the organizational structure of Wikipedia's categories?
+- How do the hub and content cue characteristics humans may be optimizing for comparz with the organizational structure of Wikipedia's categories?
 
 
 Methods
