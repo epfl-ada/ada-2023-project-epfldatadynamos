@@ -98,6 +98,8 @@ We look at the distributions of some of these measures for articles and players 
 - `duration`
 
 ##### Independent Variables (Predictors):
+- **Feature Impact Assessment**: We fit all three variables in the same model:
+  - `article_length`, `link_position`, `ratio_I/O_links`
 - **Hub Prioritization**: A metric indicating how often players select hub nodes during navigation. We make six models per dependent vairable:
   - `nb_hubs_degree`
   - `nb_hubs_betweennes`
@@ -109,45 +111,40 @@ We look at the distributions of some of these measures for articles and players 
 
 ##### Covariates (Potential Confounds):
 - `shortest_path`: accounting for inherent path difficulty.
-
-##### Random Effects (in MixedLM):
-- **Player-Specific Effects**: Random intercepts for players to account for difficulty of the path they chose:
-  - `Average_lengths_of_articles` in player’s path
-  - `Average_position_of_links` in a player’s path
-
+  
 ---
 
 Conclusions
 ============
 
-Going back to our research questions, although our various analyses cannot give a definitive answer, we have gained insights on the player behaviours and Wikipedia organizations.
+Although our various analyses cannot give a definitive answer, we have gained insights on the player's behaviours and Wikipedia's organization.
 
 - Do the existing categories in this abridged Wikipedia reflect optimal shortest paths and/or the path effectively taken by players?
 
-**Answer**: Since the existing categories reduce the average shortest path lengths within themselves and have a statistically significant influence on player behaviour, we can say that they do reflect the optimal paths and the ones taken by players. However, the extent of their influence is very small overall on player performance based on the small r-squared values.
+**Answer**: Since the existing categories reduce the average shortest path lengths within themselves, and have a statistically significant influence on player behaviour, we can say that they do reflect the optimal paths and the ones taken by players. However, the extent of their influence is very small overall on player's performance given the small r-squared values from our tests.
 
 - What content features of Wikipedia articles (e.g., number of links, length of article, etc…) may influence the efficiency of player navigation in Wikispeedia?
 
 **Answer**: According to our model, the article’s length, its average input output link ratio and the position of hyperlinks within
 them seem to affect how fast a player completes a game.
 However, we note very low r-squared values, and the tests are rather
-inconclusive since it is very likely that there are other variables in play here.
+inconclusive since it is very likely that there are other variables at play here.
 
 - How do different network centrality and clustering measures affect player paths and can it give us insight into the way humans perceive and utilize hubs in an information network?
 
-**Answer**: Human players who choose to use more hubs are more likely to finish the game in a shorter time, although the number or proportion of hubs they use in their paths has less influence than their "luck" (the length of the optimal path between the source and target article in their game play.)
+**Answer**: Human players who choose to use more hubs are more likely to finish the game in a shorter time, although the number or proportion of hubs they use in their paths has less influence than their "luck" (the length of the optimal path between the source and target article in their run).
 
-- How do the hub and content cue characteristics humans may be optimizing for comparing with the organizational structure of Wikipedia's categories?
+- How do the hub and content cue characteristics humans may be optimizing for compare with the organizational structure of Wikipedia's categories?
 
-**Answer**:  From the analysis of the distribution of centrality measures in articles used by players, it seems that many players favour hubs with a higher closeness centrality measure. At the same time, the shortest path inherent to the Wikipedia network still plays a larger role in whether a player finishes a game successfully or how fast they are. As a result, from our current analyses, it is hard to say whether Wikipedia structure is optimized for efficiency navigation or not, or whether players' performance in the game is limited by the current structure. Further analyses, and possibly additionally data gathering (e.g. via surveys) would be necessary to gain more insights on how and why players behave in a certain way, and if optimization can be achieved.
+**Answer**:  From analyzing the distribution of centrality measures in articles used by players, it seems that many players favour hubs with a higher closeness centrality measure. At the same time, the shortest path inherent to the Wikipedia network still plays a larger role on whether or not a player finishes a game successfully as well as how fast they are. As a result, from our current analyses, it is hard to say whether Wikipedia's structure is optimized for efficiency navigation or not, or whether players' performance in the game is limited by the current structure. Further analyses, and possibly additional data gathering (e.g. via surveys) would be necessary to gain more insights on how and why players behave in a certain way, and if optimization can be achieved.
 
 Contributions
 =============
-- Matthew: Data analysis (feature extraction, network centrality, hubs), data narrative
+- Matthew: Data analysis (feature extraction, network centrality, hubs), data narrative,
 - Marie-Lou: Data analysis (feature extraction, univariate models, feature impact assessment),
 consolidating notebook
 - Sara: Preliminary data analysis, interactive plotting, website building
-- Enes: Data analysis (exploratoryt, categories, hubs), notebook
+- Enes: Data analysis (exploratory, categories, hubs), notebook
 - Tong: Interactive plotting, data analysis (feature extraction, categories, multivariate models)
 
 -----------------------
